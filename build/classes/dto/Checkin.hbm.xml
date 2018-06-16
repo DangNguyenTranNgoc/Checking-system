@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 11, 2018 8:49:03 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="dto.Checkin" table="checkin" catalog="qldaibieu" optimistic-lock="version">
+        <id name="ckId" type="int">
+            <column name="ck_id" />
+            <generator class="foreign">
+                <param name="property">daibieu</param>
+            </generator>
+        </id>
+        <one-to-one name="daibieu" class="dto.Daibieu" constrained="true"></one-to-one>
+        <property name="ckCheck1" type="boolean">
+            <column name="ck_check1" not-null="true" />
+        </property>
+        <property name="ckCheck2" type="boolean">
+            <column name="ck_check2" not-null="true" />
+        </property>
+        <property name="ckCheck3" type="java.lang.Boolean">
+            <column name="ck_check3" />
+        </property>
+        <property name="ckCheck4" type="boolean">
+            <column name="ck_check4" not-null="true" />
+        </property>
+        <property name="ckCheck5" type="boolean">
+            <column name="ck_check5" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

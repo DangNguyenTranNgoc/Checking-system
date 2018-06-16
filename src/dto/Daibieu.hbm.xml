@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 11, 2018 8:49:03 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="dto.Daibieu" table="daibieu" catalog="qldaibieu" optimistic-lock="version">
+        <id name="dbId" type="int">
+            <column name="db_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="dbSbd" type="string">
+            <column name="db_sbd" length="6" not-null="true" />
+        </property>
+        <property name="dbFirstname" type="string">
+            <column name="db_firstname" length="30" not-null="true" />
+        </property>
+        <property name="dbLastname" type="string">
+            <column name="db_lastname" length="20" not-null="true" />
+        </property>
+        <property name="dbMale" type="boolean">
+            <column name="db_male" not-null="true" />
+        </property>
+        <property name="dbClassify" type="string">
+            <column name="db_classify" length="5" not-null="true" />
+        </property>
+        <property name="dbBirthday" type="date">
+            <column name="db_birthday" length="10" not-null="true" />
+        </property>
+        <property name="dbHome" type="string">
+            <column name="db_home" length="30" not-null="true" />
+        </property>
+        <property name="dbEthnic" type="string">
+            <column name="db_ethnic" length="30" not-null="true" />
+        </property>
+        <property name="dbReligion" type="string">
+            <column name="db_religion" length="30" not-null="true" />
+        </property>
+        <property name="dbPosition" type="string">
+            <column name="db_position" length="65535" not-null="true" />
+        </property>
+        <property name="dbFaculty" type="string">
+            <column name="db_faculty" length="30" not-null="true" />
+        </property>
+        <property name="dbAge" type="int">
+            <column name="db_age" not-null="true" />
+        </property>
+        <one-to-one name="checkin" class="dto.Checkin"></one-to-one>
+    </class>
+</hibernate-mapping>
